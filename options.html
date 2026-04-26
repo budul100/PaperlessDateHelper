@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Paperless Date Helper – Settings</title>
+</head>
+<body>
+  <p>
+    <label for="suggestionLabel">Suggestion block label:</label><br>
+    <input type="text" id="suggestionLabel" style="margin-top: 4px; width: 200px;">
+  </p>
+  <p style="color: gray; font-size: 0.9em;">
+    Must match the label Paperless-ngx renders in your language (e.g. "Suggestions:" or "Vorschläge:").
+  </p>
+
+  <label>
+    <input type="checkbox" id="flipDates">
+    Show ambiguous dates also in reversed order (MM/DD ↔ DD/MM)
+  </label>
+  <p style="color: gray; font-size: 0.9em;">
+    Useful if you have both European and American documents.
+  </p>
+
+  <script src="options.js"></script>
+</body>
+</html>
