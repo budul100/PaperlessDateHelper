@@ -35,7 +35,7 @@ Settings are stored via the browser's sync storage and persist across sessions.
 
 The extension recognises dates in the format DD.MM.YYYY only. Other formats (ISO, slash-separated, etc.) are not parsed and are passed through unchanged.
 
-## File Structure
+## Function
 
 | File          | Purpose                                                                                   |
 |---------------|-------------------------------------------------------------------------------------------|
@@ -43,8 +43,6 @@ The extension recognises dates in the format DD.MM.YYYY only. Other formats (ISO
 | content.js    | Main logic. Injected into all pages. Detects, augments, and injects suggestion blocks.    |
 | options.html  | Options page UI.                                                                          |
 | options.js    | Loads and saves settings via browser.storage.sync.                                        |
-
-## How It Works
 
 The extension injects a content script into every page. On each DOM mutation, it runs three steps:
 
