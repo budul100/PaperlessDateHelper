@@ -8,7 +8,7 @@ Paperless Date Helper is a Firefox extension for Paperless-ngx that enhances the
 
 ## Requirements
 
-Firefox 140.0 or later. No other dependencies or server-side components.
+Firefox 142.0 or later. No other dependencies or server-side components.
 
 Installation
 
