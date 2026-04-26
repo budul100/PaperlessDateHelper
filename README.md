@@ -26,27 +26,23 @@ For a permanent installation, the extension must be signed by Mozilla or loaded 
 
 Open the extension's options page via the Firefox Add-ons Manager (about:addons → Paperless Date Helper → Preferences).
 
-  ----------------- --------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Setting**       **Default**     **Description**
-  suggestionLabel   „Vorschläge:"   Label string used to identify suggestion blocks in the Paperless-ngx DOM. Must match the label rendered by your Paperless-ngx language. Common values: „Vorschläge:" (German), „Suggestions:" (English).
-  flipDates         false           Show ambiguous dates in reversed order (MM/DD ↔ DD/MM).
-  ----------------- --------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Setting         | Default       | Description                                                                                                                                                                                              |
+|-----------------|---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| suggestionLabel | „Vorschläge:" | Label string used to identify suggestion blocks in the Paperless-ngx DOM. Must match the label rendered by your Paperless-ngx language. Common values: „Vorschläge:" (German), „Suggestions:" (English). |
+| flipDates       | false         | Show ambiguous dates also in reversed order (MM/DD ↔ DD/MM).                                                                                                                                             |
 
 Settings are stored via the browser's sync storage and persist across sessions.
 
-## Supported Date Format
-
 The extension recognises dates in the format DD.MM.YYYY only. Other formats (ISO, slash-separated, etc.) are not parsed and are passed through unchanged.
 
-File Structure
+## File Structure
 
-  --------------- -------------------------------------------------------------------------------------------
-  **File**        **Purpose**
-  manifest.json   Extension manifest (Manifest V3). Declares permissions, content script, and options page.
-  content.js      Main logic. Injected into all pages. Detects, augments, and injects suggestion blocks.
-  options.html    Options page UI.
-  options.js      Loads and saves settings via browser.storage.sync.
-  --------------- -------------------------------------------------------------------------------------------
+| File          | Purpose                                                                                   |
+|---------------|-------------------------------------------------------------------------------------------|
+| manifest.json | Extension manifest (Manifest V3). Declares permissions, content script, and options page. |
+| content.js    | Main logic. Injected into all pages. Detects, augments, and injects suggestion blocks.    |
+| options.html  | Options page UI.                                                                          |
+| options.js    | Loads and saves settings via browser.storage.sync.                                        |
 
 ## How It Works
 
